@@ -1,0 +1,49 @@
+{% extends 'abase.html' %}
+{% block body %}
+
+<section id="dashboard" class="dashboard section-bg">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+        <h2>DASHBOARD</h2>
+        </div>
+        <div>
+            <form action="/uploader" method="POST", enctype="multipart/form-data">
+                <input type="file" name="file1">
+                <button class="btn btn-outline-primary">Submit</button>
+            </form>
+        </div>
+        <hr>
+        <div class="container overflow-hidden">
+            <div class="row gy-5">
+                
+                <div class="col-6 border bg-light dbox">
+                    <div class="p-3">
+                        <h1><a href="/afaq/"><i class="fa fa-question-circle" aria-hidden="true"></i>FAQ LIST</a></h1>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="p-3 border bg-light">Custom column padding</div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border bg-light">Custom column padding</div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border bg-light">Custom column padding</div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border bg-light">Custom column padding</div>
+                </div>
+                <div class="col-6">
+                    <div class="p-3 border bg-light">Custom column padding</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+{% endblock body %}

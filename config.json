@@ -1,0 +1,26 @@
+{
+    "params":
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/krishaweb",
+        "prod_uri": "mysql://root:@localhost/krishaweb",
+
+        "fb_url": "https://facebook.com/dhrumil.ponkiya",
+        "twr_url": "https://twitter.com/PonkiyaDivyesh",
+        "insta_url": "https://instagram.com/dhruv_ponkiya",
+        "linkedin_url": "https://linkedin.com/in/ponkiya-divyesh-87038578",
+
+        "gmail-user": "tulsifashion2020@gmail.com",
+        "gmail-password": "*****",
+        
+        "blog_name" : "SoftLink IT Solution",
+        "no_of_faq" : 3,
+
+        "admin_user" : "divyesh.ponkiya21@gmail.com",
+        "admin_pass" : "div123",
+
+        "upload_locaion" : "D:\\PYTHON\\website\\static\\img\\upload"
+    }
+
+
+}

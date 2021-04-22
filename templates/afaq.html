@@ -1,0 +1,54 @@
+{% extends 'abase.html' %}
+{% block body %}
+
+ <!-- ======= Frequently Asked Questions Section ======= -->
+ <section id="faq" class="faq section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Frequently Asked Questions</h2>
+      </div>
+
+      <div>
+        <a href="/dashboard/"><button class="btn btn-outline-primary">Dashboard</button></a>
+        <a href="/editfaq/0"><button class="btn btn-outline-primary">Add A New FAQ</button></a>
+      </div>
+      
+      <!-- faq table -->
+      <div>
+        {% if faq|length == 0 %}
+        <div class="alert alert-dark" role="alert">
+            No faq found. Add your first faq now!
+        </div>
+            {% else %} 
+              <table class="table table-striped" style="width: 100%;">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 5%;">Sr No.</th>
+                    <th scope="col" style="width: 25%;">Question</th>
+                    <th scope="col" style="width: 30%;">Answer</th>
+                    <th scope="col" style="width: 20%;">Date</th>
+                    <th scope="col" style="width: 20%;">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for faq in faq %}
+                  <tr>
+                    <th scope="row">{{loop.index}}</th>
+                    <td>{{faq.question}}</td>
+                    <td>{{faq.answer}}</td>
+                    <td>{{faq.date}}</td>
+                    <td>
+                      <a href="/editfaq/{{faq.sno}}" type="button" class="btn btn-outline-primary btn-sm mx-1" id="updatebtn">Update</button>
+                      <a href="/deletefaq/{{faq.sno}}" type="button" class="btn btn-outline-danger btn-sm mx-1" id="deletefaq">Delete</button>
+                    </td>
+                  </tr>
+                {% endfor %}
+                </tbody>
+              </table>
+            {% endif %}
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}

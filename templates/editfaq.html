@@ -1,0 +1,47 @@
+{% extends 'abase.html' %}
+{% block body %}
+
+ <!-- ======= Frequently Asked Questions Section ======= -->
+ <section id="faq" class="faq section-bg">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>Add / Edit Frequently Asked Questions</h2>
+      </div>
+
+      <!-- <div><a href="/afaq"><button class="btn btn-outline-primary">FAQ List</button></a></div> -->
+      <div><a href="/afaq">FAQ List</a> / Add || Edit FAQ</div>
+      <hr>
+
+      <div class="row">
+        <form action="/editfaq/{{sno}}" method="POST">
+          <div class="form-group col-md-6 input-group mb-3">
+            <div class="input-group-prepend">          
+              <span class="input-group-text" id="basic-addon1">Q</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Question" id="question" name="question" value="{{faq.question}}" aria-label="Username" aria-describedby="basic-addon1">
+          </div>  
+          
+          <div class="form-group col-md-6 input-group mb-3">
+            <div class="input-group-prepend">          
+              <span class="input-group-text" id="basic-addon1">S</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Slug" id="slug" name="slug" value="{{faq.slug}}" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="form-group col-md-6 input-group mb-3">
+            <div class="input-group-prepend">          
+              <span class="input-group-text" id="basic-addon1">A</span>
+            </div>
+            <input type="text" class="form-control" placeholder="Answer" id="answer" name="answer" value="{{faq.answer}}" aria-label="Username" aria-describedby="basic-addon1">
+          </div>
+
+          <div class="form-group col-md-6 input-group mb-3">
+            <div class="text-center"><button type="submit" id="submit" class="btn btn-outline-primary btn-sm mx-1">Add FAQ</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+{% endblock body %}

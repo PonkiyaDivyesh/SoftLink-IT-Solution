@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block body %}
+ <main id="main">
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="/team">Teams</a></li>
+          <li>Team Member Details</li>
+        </ol>
+        <h2>{{team.name}}</h2>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <!-- ======= Portfolio Details Section ======= -->
+    <section id="team-details" class="team-details">
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="team-details-slider swiper-container">
+              <div class="swiper-wrapper align-items-center">
+                {% set fname = 'img/team/' + team.image %}
+                <div class="swiper-slide">
+                  <img src="{{ url_for('static',filename=fname) }}" alt="">
+                </div>
+
+                <!-- <div class="swiper-slide">
+                  <img src="{{ url_for('static',filename='/img/portfolio/portfolio-2.jpg') }}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{{ url_for('static',filename='/img/portfolio/portfolio-3.jpg') }}" alt="">
+                </div> -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="team-info">
+              <h3>{{team.name}}</h3>
+              <ul>
+                <li><strong>Post</strong>: {{team.post}}</li>
+                <li><strong>Intro</strong>: {{team.intro}}</li>
+                <li class="social social-links"><strong>Project URL</strong>: 
+                  <a href="{{team.twit}}" target="_blank"><i class="ri-twitter-fill"></i></a>
+                  <a href="{{team.fb}}" target="_blank"><i class="ri-facebook-fill"></i></a>
+                  <a href="{{team.insta}}" target="_blank"><i class="ri-instagram-fill"></i></a>
+                  <a href="{{team.linkedin}}" target="_blank"> <i class="ri-linkedin-box-fill"></i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="team-description">
+              <h2>Breafe Intro</h2>
+              <p>
+                {{team.b_intro}}
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Portfolio Details Section -->
+
+  </main><!-- End #main -->
+  {% endblock body %}
